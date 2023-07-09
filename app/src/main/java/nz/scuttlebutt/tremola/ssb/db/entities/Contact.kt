@@ -4,6 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+
 @Entity(tableName = "Contact")
 data class Contact(
     @PrimaryKey
@@ -13,5 +14,6 @@ data class Contact(
     @ColumnInfo(name = "pict")           val pict: String?,
     @ColumnInfo(name = "scan_low")       val scan_low: Int,
     @ColumnInfo(name = "front_sequence") val front_seq: Int,
-    @ColumnInfo(name = "front_previous") val front_prev: String?
+    @ColumnInfo(name = "front_previous") val front_prev: String?,
+    @ColumnInfo(name = "trustLevel")     val trustLevel: trustLevel = nz.scuttlebutt.tremola.ssb.db.entities.trustLevel.NoTrust
 )

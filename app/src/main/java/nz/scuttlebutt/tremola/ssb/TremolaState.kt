@@ -11,6 +11,7 @@ import nz.scuttlebutt.tremola.ssb.db.daos.PubDAO
 import nz.scuttlebutt.tremola.ssb.db.entities.Contact
 import nz.scuttlebutt.tremola.ssb.db.entities.LogEntry
 import nz.scuttlebutt.tremola.ssb.db.entities.Pub
+import nz.scuttlebutt.tremola.ssb.db.entities.trustLevel
 import nz.scuttlebutt.tremola.ssb.peering.PeeringPool
 import nz.scuttlebutt.tremola.utils.Constants.Companion.EBT_FORCE_FRONTIER_INTERVAL
 import nz.scuttlebutt.tremola.utils.Constants.Companion.WIFI_DISCOVERY_INTERVAL
@@ -100,6 +101,7 @@ class TremolaState(val context: Context) {
     }
 
     fun addContact(fid: String, alias: String?) {
+        println("Hello world no2, we added a contact")
         contactDAO.insertContact(
             Contact(fid, alias, false, null, 1, 0, null)
         )
@@ -112,7 +114,7 @@ class TremolaState(val context: Context) {
                 contactDAO.insertContact(
                     Contact(
                         lid, null, false, null,
-                        scan_low = 1, front_seq = 0, front_prev = null
+                        scan_low = 1, front_seq = 0, front_prev = null, trustLevel.HighTrust
                     )
                 )
         }
