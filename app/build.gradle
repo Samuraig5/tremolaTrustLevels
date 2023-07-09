@@ -9,7 +9,7 @@ plugins {
 // apply plugin: "kotlin-kapt"
 
 android {
-    compileSdk 34
+    compileSdk 34 // was 30
 
     /*
     signingConfigs {
