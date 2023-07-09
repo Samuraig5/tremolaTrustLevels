@@ -9,19 +9,20 @@ plugins {
 // apply plugin: "kotlin-kapt"
 
 android {
+    compileSdk 34
+
     /*
     signingConfigs {
         release {
         }
     }
     */
-    compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "nz.scuttlebutt.tremola"
         minSdkVersion 24
-        targetSdkVersion 30
+        targetSdkVersion 34
         versionCode 3
         versionName '0.2.0'
         ndk {
