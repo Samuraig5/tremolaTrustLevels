@@ -5,6 +5,16 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "Contact")
+/**
+ *
+ * lid = Log ID
+ * alias = alias
+ * isPub = isPublic
+ * pict = ?
+ * scan_low = ?
+ * front_sequence = ?
+ * front_previous = ?
+ */
 data class Contact(
     @PrimaryKey
     @ColumnInfo(name = "lid")            val lid: String,
