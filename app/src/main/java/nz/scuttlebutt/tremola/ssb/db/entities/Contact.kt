@@ -25,5 +25,5 @@ data class Contact(
     @ColumnInfo(name = "scan_low")       val scan_low: Int,
     @ColumnInfo(name = "front_sequence") val front_seq: Int,
     @ColumnInfo(name = "front_previous") val front_prev: String?,
-    @ColumnInfo(name = "trustLevel")     val trustLevel: trustLevel = nz.scuttlebutt.tremola.ssb.db.entities.trustLevel.NoTrust
+    @ColumnInfo(name = "trustLevel")     val trustLevel: trustLevel = nz.scuttlebutt.tremola.ssb.db.entities.trustLevel.Restricted
 )
