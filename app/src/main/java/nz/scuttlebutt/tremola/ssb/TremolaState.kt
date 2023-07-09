@@ -101,7 +101,6 @@ class TremolaState(val context: Context) {
     }
 
     fun addContact(fid: String, alias: String?) {
-        println("Hello world no2, we added a contact")
         contactDAO.insertContact(
             Contact(fid, alias, false, null, 1, 0, null)
         )
