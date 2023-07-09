@@ -114,7 +114,7 @@ class TremolaState(val context: Context) {
                 contactDAO.insertContact(
                     Contact(
                         lid, null, false, null,
-                        scan_low = 1, front_seq = 0, front_prev = null, trustLevel.HighTrust
+                        scan_low = 1, front_seq = 0, front_prev = null, trustLevel.Friends
                     )
                 )
         }
